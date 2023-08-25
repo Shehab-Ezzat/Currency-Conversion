@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .wrapper {
-  background-image: url("../../assets/images/bg.png");
+  background-image: url(/bg.png);
   background-size: 100%;
   background-repeat: no-repeat;
 
@@ -24,7 +24,7 @@
 }
 
 .con-icon {
-  background-image: url(/../../assets/images/con-nav.png);
+  background-image: url(/con-nav.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 15%;
@@ -68,7 +68,7 @@
     ); */
   /* margin-left: 473px; */
   backdrop-filter: blur(4px);
-  width: 38%;
+  width: 35%;
   height: 75%;
 
   border-radius: 21.313556671142578px;
@@ -133,13 +133,7 @@
   line-height: 30px;
   letter-spacing: 0em;
 }
-.small-input {
-  border-radius: 25px;
-  width: 95%;
-  height: 55%;
-  border: none;
-}
-.large-input {
+.input {
   border-radius: 25px;
   width: 95%;
   height: 55%;
@@ -160,4 +154,11 @@
   font-weight: 700;
   line-height: 34px;
   letter-spacing: 0em;
+}
+.form-equal {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
