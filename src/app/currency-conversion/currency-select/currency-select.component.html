@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label>{{label}}</label>
+    <div class="select">
+        <img [src]="selectedCurrency | currencyFlag" width="30">
+        <select [(ngModel)]="selectedCurrency" name="selectedCurrency">
+            <option *ngFor="let c of apiService.currencies" [value]="c.currencyCode">
+                <img [src]="c.icon" width="30" alt="">
+                <!-- {{c.currencyName}} -->
+                {{c.currencyCode}}
+            </option>
+        </select>
+    </div>
+</div>

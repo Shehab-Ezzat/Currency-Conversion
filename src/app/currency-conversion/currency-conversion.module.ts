@@ -5,17 +5,23 @@ import { CurrencyConversionRoutingModule } from './currency-conversion-routing.m
 import { CurrencyConversionComponent } from './currency-conversion.component';
 import { ConvertComponent } from './convert/convert.component';
 import { CompareComponent } from './compare/compare.component';
+import { CurrencySelectComponent } from './currency-select/currency-select.component';
+import { FormsModule } from '@angular/forms';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
   declarations: [
     CurrencyConversionComponent,
     ConvertComponent,
-    CompareComponent
+    CompareComponent,
+    CurrencySelectComponent
   ],
   imports: [
     CommonModule,
-    CurrencyConversionRoutingModule
+    FormsModule,
+    CurrencyConversionRoutingModule,
+    PipesModule
   ]
 })
 export class CurrencyConversionModule { }

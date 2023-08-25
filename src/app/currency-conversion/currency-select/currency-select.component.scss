@@ -13,26 +13,23 @@
         margin-bottom: 10px;
     }
 
-    input[type=text],
-    input[type=number],
-    select {
+    .select {
+        display: flex;
+        align-items: center;
+        background-color: #FFF;
         border-radius: 30px;
         border: none;
         height: 72px;
         padding: 0 15px;
+
+        select {
+            width: 90%;
+            height: 65px;
+
+            &:focus-visible {
+                border: 0;
+                outline: 0;
+            }
+        }
     }
-}
-
-
-button[type=submit] {
-    width: 100%;
-    border-radius: 25px;
-    height: 54px;
-    background: rgba(14, 152, 208, 1);
-    border: none;
-    color: white;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 34px;
-    letter-spacing: 0em;
 }

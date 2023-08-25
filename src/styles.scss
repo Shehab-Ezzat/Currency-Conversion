@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 /* You can add global styles to this file, and also import other style files */
+
+body,
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
