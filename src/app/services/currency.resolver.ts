@@ -1,13 +1,13 @@
-import { inject } from '@angular/core';
-import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { ResolveFn } from '@angular/router';
 import { ApiService } from './api.service';
-
-
-export class CurrencyResolver {
-  apiService = inject(ApiService);
-  resolve(route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot) {
-    console.log('resolver works');
-    return this.apiService.getSymbols();
-  }
-}
+import { inject } from '@angular/core';
+import { tap } from 'rxjs';
+import { ICurrency } from '../models/currency.model';
+export const currencyResolver: ResolveFn<ICurrency[]> = (
+  route,
+  state,
+  apiService: ApiService = inject(ApiService)) => {
+  return apiService.getSymbols().pipe(tap(c => {
+    apiService.currencies = c;
+  }))
+};

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CurrencyResolver } from './services/currency.resolver';
 
 const routes: Routes = [
   {
