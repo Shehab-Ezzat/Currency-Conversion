@@ -1,35 +1,35 @@
 .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  label {
+    color: white;
+    padding-left: 5px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0em;
+    margin-bottom: 10px;
+  }
+
+  .select {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 15px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px;
+    border: none;
+    height: 72px;
+    padding: 0 15px;
 
-    label {
-        color: white;
-        padding-left: 5px;
-        font-size: 16px;
-        line-height: 30px;
-        letter-spacing: 0em;
-        margin-bottom: 10px;
+    select {
+      width: 90%;
+      height: 65px;
+      background-color: white;
+
+      &:focus-visible {
+        border: 0;
+        outline: 0;
+      }
     }
-
-    .select {
-        display: flex;
-        align-items: center;
-        background-color: #FFF;
-        border-radius: 30px;
-        border: none;
-        height: 72px;
-        padding: 0 15px;
-
-        select {
-            width: 90%;
-            height: 65px;
-
-            &:focus-visible {
-                border: 0;
-                outline: 0;
-            }
-        }
-    }
+  }
 }
