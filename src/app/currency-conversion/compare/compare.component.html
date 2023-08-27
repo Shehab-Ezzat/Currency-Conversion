@@ -1,33 +1,28 @@
+<form>
 
-<app-currency-select class="w-2/3"></app-currency-select>
-<!-- <div class="form-section">
-          <div class="form-equal">
-            <label>Amount</label>
-            <input type="text" class="input" />
-          </div>
-          <div class="form-equal">
-            <label>From</label>
-            <input type="text" class="input" />
-          </div>
-        </div>
-        <div class="form-section">
-          <div class="form-equal">
-            <label>Targeted currency</label>
-            <input type="text" class="input" />
-          </div>
-          <div class="form-equal">
-            <label>Targeted currency</label>
-            <input type="text" class="input" />
-          </div>
-        </div>
-        <div class="form-section">
-          <div class="form-equal">
-            <input type="text" class="input" />
-          </div>
-          <div class="form-equal">
-            <input type="text" class="input" />
-          </div>
-        </div>
-        <div class="convert-compare">
-          <button class="big-btn">compare</button>
-        </div> -->
+  <div class="flex justify-between gap-3">
+    <div class="form-group w-1/2">
+      <label>Amount</label>
+      <input type="text" placeholder="Amount" />
+    </div>
+    <app-currency-select class="w-1/2"></app-currency-select>
+  </div>
+
+  <div class="flex justify-between gap-3">
+    <app-currency-select [selectedCurrency]="'USD'" [label]="'Targeted Currency'" class="w-1/2"></app-currency-select>
+    <app-currency-select [selectedCurrency]="'GBP'" [label]="'Targeted Currency'" class="w-1/2"></app-currency-select>
+  </div>
+
+  <div class="flex justify-between gap-3 mt-5">
+    <div class="form-group w-1/2">
+      <input type="text" readonly placeholder="Amount" />
+    </div>
+    <div class="form-group w-1/2">
+      <input type="text" readonly placeholder="Amount" />
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <button type="submit">Convert</button>
+  </div>
+</form>

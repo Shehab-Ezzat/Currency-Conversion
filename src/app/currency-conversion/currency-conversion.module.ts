@@ -8,6 +8,9 @@ import { CompareComponent } from './compare/compare.component';
 import { CurrencySelectComponent } from './currency-select/currency-select.component';
 import { FormsModule } from '@angular/forms';
 import { PipesModule } from '../pipes/pipes.module';
+import { LiveExchangeRatesComponent } from './live-exchange-rates/live-exchange-rates.component';
+import { PortfolioCardComponent } from './live-exchange-rates/portfolio-card/portfolio-card.component';
+import { AddToFavComponent } from './add-to-fav/add-to-fav.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { PipesModule } from '../pipes/pipes.module';
     CurrencyConversionComponent,
     ConvertComponent,
     CompareComponent,
-    CurrencySelectComponent
+    CurrencySelectComponent,
+    LiveExchangeRatesComponent,
+    PortfolioCardComponent,
+    AddToFavComponent
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,4 @@
-<div class="form">
+<div class="form mb-16">
   <div class="btns mb-6">
     <button (click)="tabState='CONVERT'" class="btn" [ngClass]="{'active' : tabState==='CONVERT'}">Convert</button>
     <button (click)="tabState='COMPARE'" class="btn" [ngClass]="{'active' : tabState==='COMPARE'}">Compare</button>
@@ -8,3 +8,5 @@
   <app-compare *ngIf="tabState==='COMPARE'"></app-compare>
 
 </div>
+
+<live-exchange-rates></live-exchange-rates>

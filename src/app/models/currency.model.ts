@@ -6,5 +6,6 @@ export interface ICurrency {
     status: string,
     availableFrom: string,
     availableUntil: string,
-    icon: string
+    icon: string,
+    selected?: boolean
 }

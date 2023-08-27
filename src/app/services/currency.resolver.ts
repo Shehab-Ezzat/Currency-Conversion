@@ -7,7 +7,7 @@ export const currencyResolver: ResolveFn<ICurrency[]> = (
   route,
   state,
   apiService: ApiService = inject(ApiService)) => {
-  return apiService.getSymbols().pipe(tap(c => {
+  return apiService.getCurrencies().pipe(tap(c => {
     apiService.currencies = c;
   }))
 };

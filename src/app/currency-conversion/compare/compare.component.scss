@@ -1,0 +1,37 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    label {
+        color: white;
+        padding-left: 5px;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0em;
+        margin-bottom: 10px;
+    }
+
+    input[type=text],
+    input[type=number],
+    select {
+        border-radius: 30px;
+        border: none;
+        height: 72px;
+        padding: 0 15px;
+    }
+}
+
+button[type=submit] {
+    width: 100%;
+    border-radius: 25px;
+    height: 54px;
+    background: rgba(14, 152, 208, 1);
+    border: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+}
