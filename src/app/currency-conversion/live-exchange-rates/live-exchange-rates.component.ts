@@ -22,7 +22,7 @@ export class LiveExchangeRatesComponent {
     this.getMyPortfolio();
     this.apiService.currencies.forEach(c => {
       this.portfolioCurrencies.forEach(el => {
-        if (c.currencyCode === el.currencyCode) {
+        if (c.code === el.code) {
           c.selected = el.selected
         }
       })

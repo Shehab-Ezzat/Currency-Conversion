@@ -7,8 +7,10 @@ import { ICurrency } from '../models/currency.model';
   providedIn: 'root'
 })
 export class ApiService {
-
+  baseAPI = 'https://graduationprojectbm.up.railway.app/api';
   currencies: ICurrency[] = [];
+
+
   constructor(private http: HttpClient) { }
 
 
@@ -22,16 +24,16 @@ export class ApiService {
     if (currency.selected) {
       myPortfolio.push(currency);
     } else {
-      myPortfolio = myPortfolio.filter((c: ICurrency) => c.currencyCode != currency.currencyCode);
+      myPortfolio = myPortfolio.filter((c: ICurrency) => c.code != currency.code);
     }
     localStorage.setItem('myPortfolioRates', JSON.stringify(myPortfolio));
   }
 
 
 
-  getCurrencies():Observable<ICurrency[]> {
-    return this.http.get('https://api.currencyfreaks.com/v2.0/supported-currencies').pipe(map((res: any) => {
-      return Object.values(res.supportedCurrenciesMap).filter((v:any) => v.countryCode != 'Crypto') as ICurrency[]
+  getCurrencies(): Observable<ICurrency[]> {
+    return this.http.get(`${this.baseAPI}/v1/currency`).pipe(map((res: any) => {
+      return Object.values(res.data) as ICurrency[]
     }));
   }
 }

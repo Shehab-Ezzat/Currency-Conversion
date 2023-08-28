@@ -13,11 +13,11 @@
             <li *ngFor="let currency of currencies" (click)="onSelect(currency)">
 
                 <div class="w-14 h-14 overflow-hidden rounded-[100%] bg-cover bg-center me-4"
-                    [ngStyle]="{'background-image':'url('+currency.icon+')'}"></div>
+                    [ngStyle]="{'background-image':'url('+currency.imageUrl+')'}"></div>
 
                 <div class="text-[19px]">
-                    <span>{{ currency.currencyCode }}</span>
-                    <div class="text-neutral-400">{{currency.currencyName}}</div>
+                    <span>{{ currency.code }}</span>
+                    <div class="text-neutral-400">{{currency.name}}</div>
                 </div>
 
                 <input type="checkbox" [(ngModel)]="currency.selected" />

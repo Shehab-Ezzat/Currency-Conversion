@@ -12,7 +12,7 @@ export class CurrencyFlagPipe implements PipeTransform {
 
     let icon = '';
     if (currencyCode) {
-      icon = this.apiService.currencies.find(c => c.currencyCode === currencyCode)!.icon;
+      icon = this.apiService.currencies.find(c => c.code === currencyCode)!.imageUrl;
     }
     return icon;
   }
