@@ -63,6 +63,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "project-name:build",
+            "proxyConfig": "./proxy.conf.json"
+        },
           "configurations": {
             "production": {
               "browserTarget": "Currency-Conversion2:build:production"

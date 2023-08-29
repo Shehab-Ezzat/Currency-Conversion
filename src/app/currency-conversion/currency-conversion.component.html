@@ -5,8 +5,8 @@
   </div>
 
   <app-convert *ngIf="tabState==='CONVERT'"></app-convert>
-  <app-compare *ngIf="tabState==='COMPARE'"></app-compare>
+  <app-compare (onAction)="checkForChanges($event)" *ngIf="tabState==='COMPARE'"></app-compare>
 
 </div>
 
-<live-exchange-rates></live-exchange-rates>
+<live-exchange-rates #exchangeRates></live-exchange-rates>

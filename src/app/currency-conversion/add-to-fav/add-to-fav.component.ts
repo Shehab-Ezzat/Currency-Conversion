@@ -15,9 +15,7 @@ export class AddToFavComponent {
   @HostListener('document:click', ['$event'])
   clickOut(event: any) {
     if (this.dropdown && this.dropdown.nativeElement.contains(event.target) || this.dropdownBtn && this.dropdownBtn.nativeElement.contains(event.target)) {
-      console.log("clicked inside");
     }  else {
-      console.log("clicked outside");
       this.isDropdownOpen = false;
     }
   }

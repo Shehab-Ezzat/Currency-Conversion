@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://graduationprojectbm.up.railway.app",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "ws": true
+    }
+  }

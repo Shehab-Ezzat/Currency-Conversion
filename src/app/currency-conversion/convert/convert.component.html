@@ -1,20 +1,20 @@
-<form>
+<form (ngSubmit)="submit()">
     <div class="flex justify-between gap-3">
         <div class="form-group w-1/3">
             <label>Amount</label>
-            <input type="text" placeholder="Amount" />
+            <input type="text" [(ngModel)]="amount" name="amount" placeholder="Amount" />
         </div>
 
-        <app-currency-select class="w-2/3"></app-currency-select>
+        <app-currency-select [selectedCurrency]="'EGP'" (getSelection)="selectedFrom = $event" class="w-2/3"></app-currency-select>
 
     </div>
     <div class="flex justify-between gap-3">
 
-        <app-currency-select [selectedCurrency]="'USD'" class="w-2/3"></app-currency-select>
+        <app-currency-select [selectedCurrency]="'USD'" (getSelection)="selectedTo = $event" class="w-2/3"></app-currency-select>
 
         <div class="form-group w-1/3">
             <label>Amount</label>
-            <input type="text" readonly placeholder="Amount" />
+            <input type="text" [(ngModel)]="result" name="result" readonly placeholder="Amount" />
         </div>
     </div>
     <div class="mt-8">
