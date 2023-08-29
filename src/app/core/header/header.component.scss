@@ -1,3 +1,7 @@
 header {
-  @apply h-[70px] mt-[80px] ml-[140px] inline-block
+  @apply h-[70px] mt-[80px] ml-[140px] inline-block;
+
+  @media (max-width:500px) {
+    @apply mt-5 ml-0;
+  }
 }

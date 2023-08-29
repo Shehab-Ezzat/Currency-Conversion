@@ -33,4 +33,9 @@
       }
     }
   }
+
+  @media (max-width:500px) {
+    @apply w-full;
+    padding: 20px;
+  }
 }
